@@ -7,7 +7,7 @@ def errorParsing() -> bool:
 
     Return true if yes.
 
-    Return false if no
+    Return false if no.
     """
     length = len(sys.argv)
 
@@ -20,9 +20,9 @@ def errorParsing() -> bool:
 
 def getWithFuncion(str: str, func) -> int:
     """
-    Itter on str with a function
+    Itter on str with a function.
 
-    Return the number or the function is true
+    Return the number or the function is true.
     """
     count = 0
 
@@ -35,7 +35,7 @@ def getWithFuncion(str: str, func) -> int:
 
 def isPunctuation(char: str) -> bool:
     """
-    Return true if the char is a punctuation and false is not
+    Return true if the char is a punctuation and false is not.
     """
     punctuation = "!\"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~"
 
@@ -48,9 +48,9 @@ def isPunctuation(char: str) -> bool:
 
 def isSpace(c: str) -> bool:
     """
-    Return true if the char is a space and false is not
+    Return true if the char is a space and false is not.
     """
-    if (c == " "):
+    if (c == " " or c == "\r"):
         return (True)
 
     return (False)
@@ -58,9 +58,9 @@ def isSpace(c: str) -> bool:
 
 def main():
     """
-    Prints messages and check for errors
+    Prints messages and check for errors.
     """
-    if (not errorParsing):
+    if (not errorParsing()):
         return
 
     arg = sys.argv[1]
