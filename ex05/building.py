@@ -1,5 +1,6 @@
 import sys
 
+
 def errorParsing() -> bool:
     """
     Check if a parsing is good and return a correct error message.
@@ -36,10 +37,11 @@ def isPunctuation(char: str) -> bool:
     """
     Return true if the char is a punctuation and false is not
     """
-    punctuation = "!\"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~"
+    punctuation = "!\"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~"
 
     for c in punctuation:
-        if (c == char): return (True)
+        if (c == char):
+            return (True)
 
     return (False)
 
@@ -48,7 +50,8 @@ def isSpace(c: str) -> bool:
     """
     Return true if the char is a space and false is not
     """
-    if (c == " "): return(True)
+    if (c == " "):
+        return (True)
 
     return (False)
 
@@ -57,7 +60,8 @@ def main():
     """
     Prints messages and check for errors
     """
-    if (errorParsing() == False): return
+    if (not errorParsing):
+        return
 
     arg = sys.argv[1]
     print(f"The text contains {len(arg)} characters:")
