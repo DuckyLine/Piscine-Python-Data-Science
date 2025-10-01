@@ -1,6 +1,6 @@
 def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
     """
-    Return a list with a different imc.
+    Return and calcul the imc with parameters send to this function and return a list.
     """
     list = []
     i = 0
@@ -32,8 +32,8 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
         if not isinstance(elem, (int, float)):
             continue
         if elem < limit:
-            list.append(True)
-        else:
             list.append(False)
+        else:
+            list.append(True)
 
     return (list)
